@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Serve By Example</title>
+  <meta name="description" content="Contact Serve By Example for venue sales support or hospitality training sessions." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">SBE</span>
+        <span class="brand-name">Serve By Example</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a class="active" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead">Send a quick enquiry and we’ll get back to you.</p>
+
+      <div class="grid-2">
+        <section class="panel">
+          <h2>Enquiry form</h2>
+
+          <!-- This uses mailto (no backend required). Replace the email below. -->
+          <form class="form" action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
+            <label>
+              Your name
+              <input name="name" required placeholder="Name" />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" required placeholder="you@email.com" />
+            </label>
+
+            <label>
+              I’m enquiring about
+              <select name="pathway" required>
+                <option value="">Select…</option>
+                <option>Venue / Brand Sales Support</option>
+                <option>Family / Youth Training</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" required placeholder="Tell us what you need…"></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send enquiry</button>
+            <p class="tiny muted">Tip: Replace the email in this page with your real email.</p>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Prefer a direct message?</h2>
+          <p class="muted">Add your details below (phone/Instagram/etc.).</p>
+
+          <div class="contact-cards">
+            <div class="mini-card">
+              <strong>Email</strong>
+              <span class="muted">YOUR_EMAIL_HERE@example.com</span>
+            </div>
+            <div class="mini-card">
+              <strong>Location</strong>
+              <span class="muted">Australia</span>
+            </div>
+            <div class="mini-card">
+              <strong>Hours</strong>
+              <span class="muted">Mon–Fri</span>
+            </div>
+          </div>
+
+          <p class="tiny muted">Want a proper form that sends to your inbox without mailto? I can upgrade this to a Cloudflare Forms-style setup (via Workers) or a free form provider.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">SBE</span>
+          <span class="brand-name">Serve By Example</span>
+        </div>
+        <p class="muted">Training & sales support for hospitality and families.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="container tiny muted">© <span id="year"></span> Serve By Example</div>
+  </footer>
+</body>
+</html>
